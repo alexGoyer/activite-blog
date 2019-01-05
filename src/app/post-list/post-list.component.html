@@ -1,0 +1,15 @@
+<div class="list-group">
+
+	<li class="list-group-item" [ngClass]="{'list-group-item':true,
+	'list-group-item-success':loveIts>0,
+	'list-group-item-danger':loveIts<0}" >
+	<div [ngStyle]="{color:getColorPost()}"><div class="date_create pull-right"> {{ created_at |  date:'d/MM/yyyy H:mm'}}</div>
+		<h2 class="list-group-item-heading">{{title}}</h2>
+		<p>{{content}}</p>
+		<div class="btn-toolbar">
+			<button class="btn btn-success" (click)="addLove()">Love it!</button>
+			<button class="btn btn-danger" (click)="deleteLove()">Don't love it</button>
+		</div>
+	</div>
+	</li>
+</div>
